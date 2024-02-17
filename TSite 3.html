@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Will You Be My Valentine?</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        #content-container {
+            text-align: center; /* Center align everything except background images */
+        }
+        #page1 {
+            background-image: url('Pic2.jpeg'); /* Change to your desired background image */
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        #page2 {
+            background-image: url('Pic8.jpg'); /* Change to your desired background image */
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            height: 100%
+        }
+        #page2-content {
+            text-align: center;
+        }
+   
+        .heart-background {
+            background-image: url('heart_background.jpg'); /* Change to your desired background image */
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        h1 {
+            color: #d93025;
+        }
+        #options {
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 0 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #d93025;
+            color: white;
+        }
+        button:hover {
+            background-color: #c3221f;
+        }
+        #gallery {
+            margin-top: 30px;
+        }
+        #gallery img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content-container">
+        <div id="page1" class="heart-background">
+            <h1> Tshielo Kobe, Will You Be My Valentine?</h1>
+            <div id="options">
+                <button onclick="handleNo()">No</button>
+                <button onclick="handleYes()">Yes</button>
+            </div>
+        </div>
+        <div id="page2" class="heart-background" style="display:none;">
+            <div id="page2-content">
+                <img src='Pic6.jpg'alt='Heart Gif'style="width:300px;height:300px;">
+                <p>My Dearest Tshielo,<br><br>On this special Valentine's Day, I want to take a moment to express the depths of my love for you. You are the light that brightens my days, the melody that fills my heart with joy, and the warmth that envelops my soul.<br><br>As I reflect on our journey together, I am filled with gratitude for every moment we've shared. Your love has transformed my life in ways I never imagined possible. You have shown me kindness, compassion, and unwavering support, and for that, I am eternally grateful.<br><br>I am in awe of the person you are—strong, intelligent, and fiercely independent. Your unwavering dedication to your beliefs is admirable, even if it means challenging societal norms. And yet, despite your reservations towards men, you chose to let me into your life, and for that, I am profoundly humbled.<br><br>With each passing day, my love for you grows stronger. You are my confidante, my partner-in-crime, and my greatest source of happiness. I cherish every moment we spend together, and I am filled with excitement at the thought of spending the rest of my life by your side.<br><br>So, on this Valentine's Day, I want you to know that my love for you knows no bounds. You are my everything, and I am grateful for the privilege of being your partner. Here's to many more adventures, laughter-filled moments, and a lifetime of love.<br><br>Happy Valentine's Day, my darling. I love you more than words can express.<br><br>Forever Yours,<br>Mxolisi</p>
+                <button onclick="goToPage(1)">Back</button>
+            </div>
+        </div>
+       
+        <div id="gallery" class="heart-background" style="display:none;">
+            <h2>Gallery</h2>
+            <!-- Your gallery images will be displayed here -->
+            <button onclick="goToPage(3)">Back</button>
+        </div>
+    </div>
+
+    <script>
+        var currentPage = 1;
+
+        function goToPage(pageNumber) {
+            document.getElementById("page" + currentPage).style.display = "none";
+            document.getElementById("page" + pageNumber).style.display = "block";
+            currentPage = pageNumber;
+        }
+
+        function handleNo() {
+            alert("Baby don't hurt me, don't hurt me, no more lol try again");
+        }
+
+        function handleYes() {
+            goToPage(2);
+        }
+
+        function showGallery() {
+            goToPage(3);
+        }
+    </script>
+</body>
+</html>
